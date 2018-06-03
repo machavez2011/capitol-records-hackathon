@@ -18,9 +18,6 @@ export default class Example extends React.Component {
           <Link to="/rap-battle" className="btn btn-link">
             Rap Battle
           </Link>
-          <Link to="/video" className="btn btn-link">
-            Video
-          </Link>
         </div>
       </React.Fragment>
     );

@@ -16,7 +16,6 @@ export default function Router() {
         </div>
         <div>
           <Switch>
-            <Route path="/video" component={Video} />
             <Route exact path="/" component={Home} />
             <Route path="/rap-battle" component={RapBattle} />
           </Switch>
