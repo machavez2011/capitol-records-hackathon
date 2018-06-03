@@ -9,7 +9,7 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-      <Grid>
+      // <Grid>
         <Row>
           <Col>
             <iframe
@@ -18,7 +18,7 @@ class Dashboard extends React.Component {
             />
           </Col>
         </Row>
-      </Grid>
+      // </Grid>
     );
   }
 }
