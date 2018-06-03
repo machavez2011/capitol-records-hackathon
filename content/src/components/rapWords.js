@@ -71,6 +71,7 @@ class RapWords extends React.Component {
         <button
             type="button"
             onClick={this.onSave}
+            className="btn btn-success"
         >
             Submit
         </button>
