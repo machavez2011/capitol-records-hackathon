@@ -1,3 +1,3 @@
-# meetNride
-### Building motorcycle community.
-* UNDER CONSTRUCTION
+# Freestyle rap
+### Connecting freestyle rappers.
+* yoyo.
