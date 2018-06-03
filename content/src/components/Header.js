@@ -15,11 +15,8 @@ export default class Example extends React.Component {
           <Link to="/" className="btn btn-link">
             Home
           </Link>
-          <Link to="/create-group" className="btn btn-link">
-            Create Group
-          </Link>
-          <Link to="/rap-words" className="btn btn-link">
-            Rap Words
+          <Link to="/rap-battle" className="btn btn-link">
+            Rap Battle
           </Link>
         </div>
       </React.Fragment>
