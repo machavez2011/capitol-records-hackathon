@@ -10,9 +10,12 @@ class Dashboard extends React.Component {
   render() {
     return (
       <Grid>
-        <Row className="testing">
+        <Row>
           <Col>
-          <h1>yo</h1>
+            <iframe
+              src="https://tokbox.com/embed/embed/ot-embed.js?embedId=2b0c2f80-276e-4577-b9d6-1bf4938698fa&room=DEFAULT_ROOM&iframe=true"
+              allow="microphone; camera"
+            />
           </Col>
         </Row>
       </Grid>
