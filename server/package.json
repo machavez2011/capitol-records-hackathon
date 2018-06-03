@@ -14,11 +14,16 @@
     "body-parser": "^1.18.2",
     "cloudinary": "^1.11.0",
     "cookie-parser": "^1.4.3",
+    "crypto-js": "^3.1.9-1",
+    "cryptojs": "^2.5.3",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "mongo": "^0.1.0",
     "mongodb": "2.2.31",
-    "player": "^0.6.1"
+    "player":"^0.6.1",
+    "oauth": "^0.9.15",
+    "oauth-sign": "^0.8.2",
+    "opentok": "^2.6.2"
   },
   "devDependencies": {}
 }

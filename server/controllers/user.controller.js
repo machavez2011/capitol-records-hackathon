@@ -3,7 +3,7 @@ const userService = require("../services/user.service");
 const responses = require("../models/responses");
 const emailService = require("../services/email.service");
 const dotenv = require("dotenv");
-const crypto = require("crypto")
+const crypto = require("crypto");
 
 module.exports = router;
 
@@ -28,7 +28,7 @@ router.post("/", function(req, res) {
       responseModel = new responses.ItemResponse();
       responseModel.item = id;
       console.log("data has been stored!");
-      let tokenNumber = crypto.randomBytes(32).toString('hex');
+      let tokenNumber = crypto.randomBytes(32).toString("hex");
       const msg = {
         to: "hyundo@mailinator.com",
         from: "no-reply@meetNride.com",

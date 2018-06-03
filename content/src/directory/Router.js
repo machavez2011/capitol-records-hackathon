@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import Video from "../components/Video";
 import Header from "../components/Header";
 import Home from "../components/Home";
 import RapBattle from "../components/RapBattle";
-import Dashboard from "../components/Dashboard";
 import CreateGroup from "../components/CreateGroup";
 import RapWords from "../components/rapWords";
 
