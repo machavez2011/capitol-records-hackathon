@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Router } from "react-router-dom";
 // import "./App.css";
-import Layout from "./directory/Layout";
+import Routes from "./directory/Router";
 import createHistory from "history/createBrowserHistory";
 import RapWords from "./components/rapWords";
 
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <Router history={history}>
         <React.Fragment>
-          <Layout />
+          <Routes />
           <RapWords />
         </React.Fragment>
       </Router>
