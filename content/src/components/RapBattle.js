@@ -2,20 +2,21 @@ import React from "react";
 import RapWords from "./rapWords";
 import Users from "./Users";
 import Video from "./Video";
+import { Col, Row } from "react-bootstrap";
 
 class RapBattle extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="row">
-          <div className="col-md-6">
+        <Row>
+          <Col md={6}>
             <Video />
             <Users />
-          </div>
-          <div className="col-md-6">
+          </Col>
+          <Col md={6}>
             <RapWords />
-          </div>
-        </div>
+          </Col>
+        </Row>
       </React.Fragment>
     );
   }
