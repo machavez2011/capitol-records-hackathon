@@ -58,3 +58,4 @@ typings/
 **/build/**
 
 package-lock.json
+server/package-lock.json

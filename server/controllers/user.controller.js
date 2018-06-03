@@ -3,16 +3,17 @@ const userService = require("../services/user.service");
 const responses = require("../models/responses");
 const emailService = require("../services/email.service");
 const dotenv = require("dotenv");
-const crypto = require("crypto")
+const crypto = require("crypto");
+const OpenTok = require("opentok");
+openTok = new OpenTok("46131272", "8aa10182aecef3072c67f90ba05ec2baafa3178b");
 
 module.exports = router;
 
-router.get("/", function(req, res) {
-  userService
-    .readAll()
-    .then(users => {
+router.get("/", (req, res) => {
+  openTok.createSession()
+    .then(session => {
       const responseModel = new responses.ItemsResponse();
-      responseModel.items = users;
+      // responseModel.items = users;
       res.json(responseModel);
     })
     .catch(err => {
@@ -21,6 +22,20 @@ router.get("/", function(req, res) {
     });
 });
 
+// router.get("/", function(req, res) {
+//   userService
+//     .readAll()
+//     .then(users => {
+//       const responseModel = new responses.ItemsResponse();
+//       responseModel.items = users;
+//       res.json(responseModel);
+//     })
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).send(new responses.ErrorResponse(err));
+//     });
+// });
+
 router.post("/", function(req, res) {
   userService
     .register(req.body)
@@ -28,7 +43,7 @@ router.post("/", function(req, res) {
       responseModel = new responses.ItemResponse();
       responseModel.item = id;
       console.log("data has been stored!");
-      let tokenNumber = crypto.randomBytes(32).toString('hex');
+      let tokenNumber = crypto.randomBytes(32).toString("hex");
       const msg = {
         to: "hyundo@mailinator.com",
         from: "no-reply@meetNride.com",
