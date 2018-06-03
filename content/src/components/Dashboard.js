@@ -10,11 +10,7 @@ class Dashboard extends React.Component {
   render() {
     return (
       <Grid>
-        <Row className="testing">
-          <Col>
-          <h1>yo</h1>
-          </Col>
-        </Row>
+        <Row className="testing" />
       </Grid>
     );
   }
