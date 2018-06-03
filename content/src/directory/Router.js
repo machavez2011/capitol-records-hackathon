@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Dashboard from "../components/Dashboard";
+import Video from "../components/Video";
 import Header from "../components/Header";
 import CreateGroup from "../components/CreateGroup";
 
@@ -9,7 +9,7 @@ export default function Router() {
     <React.Fragment>
       <Header />
       <Switch>
-        <Route path="/" component={Dashboard} />
+        <Route path="/" component={Video} />
         <Route path="/create-group" component={CreateGroup} />
       </Switch>
     </React.Fragment>
