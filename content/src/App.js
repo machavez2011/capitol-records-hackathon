@@ -10,8 +10,7 @@ class App extends Component {
     return(
       <Router history={history}>
         <Layout/>
-        <p>Hi</p>
-    </Router>
+      </Router>
     )
   }
 }
