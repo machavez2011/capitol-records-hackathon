@@ -4,16 +4,15 @@ const responses = require("../models/responses");
 const emailService = require("../services/email.service");
 const dotenv = require("dotenv");
 const crypto = require("crypto");
-const OpenTok = require("opentok");
-openTok = new OpenTok("46131272", "8aa10182aecef3072c67f90ba05ec2baafa3178b");
 
 module.exports = router;
 
-router.get("/", (req, res) => {
-  openTok.createSession()
-    .then(session => {
+router.get("/", function(req, res) {
+  userService
+    .readAll()
+    .then(users => {
       const responseModel = new responses.ItemsResponse();
-      // responseModel.items = users;
+      responseModel.items = users;
       res.json(responseModel);
     })
     .catch(err => {
@@ -21,20 +20,6 @@ router.get("/", (req, res) => {
       res.status(500).send(new responses.ErrorResponse(err));
     });
 });
-
-// router.get("/", function(req, res) {
-//   userService
-//     .readAll()
-//     .then(users => {
-//       const responseModel = new responses.ItemsResponse();
-//       responseModel.items = users;
-//       res.json(responseModel);
-//     })
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).send(new responses.ErrorResponse(err));
-//     });
-// });
 
 router.post("/", function(req, res) {
   userService
