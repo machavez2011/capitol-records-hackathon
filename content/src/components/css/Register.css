@@ -1,0 +1,19 @@
+.div_register {
+    border: 2px solid #7168D1;
+    border-radius: 5px;
+    display: table-cell;
+    text-align: left;
+    /* vertical-align: middle; */
+    background-color: #F7F8FA;
+    width: 500px;
+    display:block;
+    margin: auto;
+ }
+ #signup{
+     text-align: center;
+ }
+ .form_register{
+    padding: 30px 30px 30px 30px;
+ }
+
+ 
