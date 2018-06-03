@@ -1,15 +1,17 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import LayoutRouter from "./LayoutRouter";
-import NoLayoutRouter from "./NoLayoutRouter";
+import Dashboard from "../components/Dashboard";
+import Header from "../components/Header";
+import CreateGroup from "../components/CreateGroup";
 
 export default function Router() {
-   return (
-      <React.Fragment>
-         <Switch>
-            <Route path="/auth" component={NoLayoutRouter} />
-            <Route path="/" component={LayoutRouter} />
-         </Switch>
-      </React.Fragment>
-   );
+  return (
+    <React.Fragment>
+      <Header />
+      <Switch>
+        <Route path="/" component={Dashboard} />
+        <Route path="/create-group" component={CreateGroup} />
+      </Switch>
+    </React.Fragment>
+  );
 }
