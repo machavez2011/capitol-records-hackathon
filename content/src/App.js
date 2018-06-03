@@ -9,12 +9,11 @@ const history = createHistory();
 class App extends Component {
   render() {
     return (
-      <Router history={history}>
-        <React.Fragment>
+      <React.Fragment>
+        <Router history={history}>
           <Routes />
-          <RapWords />
-        </React.Fragment>
-      </Router>
+        </Router>
+      </React.Fragment>
     );
   }
 }
